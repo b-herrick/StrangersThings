@@ -79,7 +79,7 @@ function App() {
             <Link to='/posts/create'>Create A Post</Link>
             <Link to='/about_us'>About Us</Link>
             <Link to='/contact_us'>Contact Us</Link>
-            <Link to='/most_expensive'>Most Expensive Post</Link>
+            {/*<Link to='/most_expensive'>Most Expensive Post</Link>*/}
             <Routes>
               <Route path='/posts/create' element={ <CreatePost createPost={ createPost } />} />
             </Routes>
@@ -90,7 +90,7 @@ function App() {
             <AuthForm submit={ login } txt='Login'/>
             <Link to='/about_us'>About Us</Link>
             <Link to='/contact_us'>Contact Us</Link>
-            <Link to='/most_expensive'>Most Expensive Post</Link>
+            {/*<Link to='/most_expensive'>Most Expensive Post</Link>*/}
           </>
         )
       }
@@ -99,7 +99,7 @@ function App() {
         <Route path='/posts/:id' element={ <Post posts={ posts } auth={ auth }/>} />
         <Route path='/about_us' element={ <AboutUs />} />
         <Route path='/contact_us' element={ <ContactUs />} />
-        <Route path='/most_expensive' element={ <Most posts={posts} auth={auth}/>}/>
+        {/*<Route path='/most_expensive' element={ <Most posts={posts} auth={auth}/>}/>*/}
       </Routes>
     </>
   )
