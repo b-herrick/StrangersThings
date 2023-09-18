@@ -2,9 +2,15 @@ import { useState, useEffect } from 'react'
 
 import { useParams, Link } from 'react-router-dom';
 
-const Post = ({ posts, auth })=> {
+const Most = ({ posts, auth })=> {
+    let cur;
+    posts.map((post)=>{
+        if(post.price>=cur.price){
+            cur=post
+        }
+    })
   const { id } = useParams();
-  const post = posts.find(post => post._id === id);
+  const post = cur;
   if(!post){
     return null;
   }
@@ -17,4 +23,4 @@ const Post = ({ posts, auth })=> {
   );
 };
 
-export default Post;
+export default Most;
